@@ -5,6 +5,7 @@ import useStateImage from './images/useState.png';
 import useContextImage from './images/useContext.png';
 import useRefImage from './images/useRef.png';
 import useReducerImage from './images/useReducer.png'
+import customHookImage from './images/customHook.png'
 import rules from './images/rules.png';
 import references from './images/references.png';
 import tree from './images/tree.png';
@@ -14,6 +15,7 @@ import { UseEffectHook } from './hooks/UseEffectHook';
 import { UseContextHook } from './hooks/UseContextHook';
 import { UseRefHook } from './hooks/UseRefHook';
 import { UseReducerHook } from './hooks/UseReducerHook';
+import { CustomHook } from './hooks/CustomHook';
 import classEvents from './images/classEvents.png';
 
 function App() {
@@ -77,8 +79,9 @@ function App() {
           <UseReducerHook></UseReducerHook>
         </Hook>
 
-        <Hook title="useDebugValue() + CustomHooks" image={classEvents}>
-        </Hook>
+        <Hook title="useDebugValue() + CustomHooks" image={customHookImage}>
+          <CustomHook initialValue={42}></CustomHook>
+        </Hook> 
 
         <Hook title="References 📚" image={references}>
           <a href="https://reactjs.org/docs/hooks-intro.html"> Reacts Intro Official </a> <br/><br/>
@@ -86,6 +89,8 @@ function App() {
           <a href="https://www.youtube.com/channel/UCsBjURrPoezykLs9EqgamOA">Fireship.io</a><br/><br/>
           <a href="https://www.youtube.com/channel/UCSJbGtTlrDami-tDGPUV9-w">Academind</a><br/><br/>
           <a href="https://www.youtube.com/channel/UC-8QAzbLcRglXeN_MY9blyw">Ben Awad</a><br/><br/>
+
+          <p>Check the repo to play around with hooks https://github.com/jesus-rod/react-hooks-kata </p>
         </Hook>
       </header>
     </div>
