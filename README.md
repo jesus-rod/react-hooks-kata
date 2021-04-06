@@ -30,7 +30,7 @@ yarn run test
 
 👤 **Jesus Rodriguez Ramirez**
 
-* Website: www.devpragmatico.com
+* Website: https://devpragmatico.com
 * Twitter: [@devpragmatico](https://twitter.com/devpragmatico)
 * Github: [@jesus-rod](https://github.com/jesus-rod)
 * LinkedIn: [@jesus-rod](https://linkedin.com/in/jesus-rod)
