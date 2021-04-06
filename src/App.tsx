@@ -2,10 +2,12 @@ import React, { useState } from 'react';
 import './App.css';
 import { Hook } from "./Hook";
 import useStateImage from './images/useState.png';
+import useEffect from './images/useEffect.png';
 import useContextImage from './images/useContext.png';
 import useRefImage from './images/useRef.png';
 import useReducerImage from './images/useReducer.png'
 import customHookImage from './images/customHook.png'
+import reactBeforeAfterImage from './images/reactbeforeafter.png'
 import rules from './images/rules.png';
 import references from './images/references.png';
 import tree from './images/tree.png';
@@ -17,6 +19,7 @@ import { UseRefHook } from './hooks/UseRefHook';
 import { UseReducerHook } from './hooks/UseReducerHook';
 import { CustomHook } from './hooks/CustomHook';
 import classEvents from './images/classEvents.png';
+import { TitleComponent } from './hooks/TitleComponent';
 
 function App() {
   const [destroyed, setDestroyed] = useState(false);
@@ -38,32 +41,32 @@ function App() {
     <div className="App">
       <header className="App-header">
         <div>
-          <h1> Hooks I did it again 🪝🎣 </h1>
-          <ul className="firstSlide">
-            <li>Why?</li>
-            <li>Rules of hooks</li>
-            <li>useState()</li>
-            <li>useEffect()</li>
-            <li>useContext()</li>
-            <li>useRef()</li>
-            <li>useReducer()</li>
-            <li>userDebugValue() + CustomHooks</li>
+          
+          <ul className="titleSlide">
+            <TitleComponent title="🪝🎣"></TitleComponent>
           </ul>
         </div>
-        <Hook title="Why 🤔" image={tree}>
-          <ol>
-            <li><b>You had to</b> build a React.Component class to manage state </li>
-            <li>This was annoying because it resulted in boilerplate code </li>
-            <li>But even worse was the tree of html elements/components you would get. Try DevConsole inspect now</li>
-            <li><b>Result:</b> debugging was annoying 🕵🏻‍♂️🪲</li>
-          </ol>
-          <img src={wrapperhell} alt=""/>
+        <Hook title="Why 🤔" image={reactBeforeAfterImage}>
+          <div>
+            <p>
+              <b>You had to</b> build a React.Component class: boilerplate code, complexity <br/>
+              But even worse was the tree of html elements/components you would get. <br/>
+              <b>Result:</b> 🕵🏻‍♂️🪲
+            </p>
+            <div>
+              <img src={tree} alt=""/>
+            </div>
+            <img src={wrapperhell} alt=""/>
+            <p> You can now use all of the react features without the added complexity of classes by using hooks</p>
+            <p> Reusing a small component with hooks is easier than using a big class </p>
+          </div>
         </Hook>
         <Hook title="Rules of hooks 👮🏻‍♀️" image={rules}/>
         <Hook title="useState()" image={useStateImage}>
           <UseStateHook></UseStateHook>
         </Hook>
         <Hook title="useEffect()" image={classEvents}>
+          <img src={useEffect} alt=""/>
           {useEffectContent}
         </Hook>
 
@@ -80,7 +83,7 @@ function App() {
         </Hook>
 
         <Hook title="useDebugValue() + CustomHooks" image={customHookImage}>
-          <CustomHook initialValue={42}></CustomHook>
+          <CustomHook initialValue={50}></CustomHook>
         </Hook> 
 
         <Hook title="References 📚" image={references}>
@@ -90,7 +93,7 @@ function App() {
           <a href="https://www.youtube.com/channel/UCSJbGtTlrDami-tDGPUV9-w">Academind</a><br/><br/>
           <a href="https://www.youtube.com/channel/UC-8QAzbLcRglXeN_MY9blyw">Ben Awad</a><br/><br/>
 
-          <p>Check the repo to play around with hooks https://github.com/jesus-rod/react-hooks-kata </p>
+          <p>Check the repo to play around with hooks <br/> https://github.com/jesus-rod/react-hooks-kata </p>
         </Hook>
       </header>
     </div>
